@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72C60A7C190428BF007789F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7B190428BF007789F6 /* Foundation.framework */; };
+		72C60A7E190428BF007789F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7D190428BF007789F6 /* CoreGraphics.framework */; };
+		72C60A80190428BF007789F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7F190428BF007789F6 /* UIKit.framework */; };
+		72C60A86190428BF007789F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72C60A84190428BF007789F6 /* InfoPlist.strings */; };
+		72C60A88190428BF007789F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60A87190428BF007789F6 /* main.m */; };
+		72C60A8C190428BF007789F6 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60A8B190428BF007789F6 /* WCAppDelegate.m */; };
+		72C60A8E190428BF007789F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C60A8D190428BF007789F6 /* Images.xcassets */; };
+		72C60A95190428BF007789F6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A94190428BF007789F6 /* XCTest.framework */; };
+		72C60A96190428BF007789F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7B190428BF007789F6 /* Foundation.framework */; };
+		72C60A97190428BF007789F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7F190428BF007789F6 /* UIKit.framework */; };
+		72C60A9F190428C0007789F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72C60A9D190428C0007789F6 /* InfoPlist.strings */; };
+		72C60AA1190428C0007789F6 /* WeightControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60AA0190428C0007789F6 /* WeightControlTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72C60A98190428BF007789F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72C60A70190428BF007789F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72C60A77190428BF007789F6;
+			remoteInfo = WeightControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72C60A78190428BF007789F6 /* WeightControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeightControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C60A7B190428BF007789F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72C60A7D190428BF007789F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		72C60A7F190428BF007789F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72C60A83190428BF007789F6 /* WeightControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeightControl-Info.plist"; sourceTree = "<group>"; };
+		72C60A85190428BF007789F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72C60A87190428BF007789F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72C60A89190428BF007789F6 /* WeightControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeightControl-Prefix.pch"; sourceTree = "<group>"; };
+		72C60A8A190428BF007789F6 /* WCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCAppDelegate.h; sourceTree = "<group>"; };
+		72C60A8B190428BF007789F6 /* WCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCAppDelegate.m; sourceTree = "<group>"; };
+		72C60A8D190428BF007789F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		72C60A93190428BF007789F6 /* WeightControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeightControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C60A94190428BF007789F6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		72C60A9C190428C0007789F6 /* WeightControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeightControlTests-Info.plist"; sourceTree = "<group>"; };
+		72C60A9E190428C0007789F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72C60AA0190428C0007789F6 /* WeightControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightControlTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72C60A75190428BF007789F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C60A7E190428BF007789F6 /* CoreGraphics.framework in Frameworks */,
+				72C60A80190428BF007789F6 /* UIKit.framework in Frameworks */,
+				72C60A7C190428BF007789F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C60A90190428BF007789F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C60A95190428BF007789F6 /* XCTest.framework in Frameworks */,
+				72C60A97190428BF007789F6 /* UIKit.framework in Frameworks */,
+				72C60A96190428BF007789F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72C60A6F190428BF007789F6 = {
+			isa = PBXGroup;
+			children = (
+				72C60A81190428BF007789F6 /* WeightControl */,
+				72C60A9A190428BF007789F6 /* WeightControlTests */,
+				72C60A7A190428BF007789F6 /* Frameworks */,
+				72C60A79190428BF007789F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72C60A79190428BF007789F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72C60A78190428BF007789F6 /* WeightControl.app */,
+				72C60A93190428BF007789F6 /* WeightControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72C60A7A190428BF007789F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72C60A7B190428BF007789F6 /* Foundation.framework */,
+				72C60A7D190428BF007789F6 /* CoreGraphics.framework */,
+				72C60A7F190428BF007789F6 /* UIKit.framework */,
+				72C60A94190428BF007789F6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72C60A81190428BF007789F6 /* WeightControl */ = {
+			isa = PBXGroup;
+			children = (
+				72C60A8A190428BF007789F6 /* WCAppDelegate.h */,
+				72C60A8B190428BF007789F6 /* WCAppDelegate.m */,
+				72C60A8D190428BF007789F6 /* Images.xcassets */,
+				72C60A82190428BF007789F6 /* Supporting Files */,
+			);
+			path = WeightControl;
+			sourceTree = "<group>";
+		};
+		72C60A82190428BF007789F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72C60A83190428BF007789F6 /* WeightControl-Info.plist */,
+				72C60A84190428BF007789F6 /* InfoPlist.strings */,
+				72C60A87190428BF007789F6 /* main.m */,
+				72C60A89190428BF007789F6 /* WeightControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72C60A9A190428BF007789F6 /* WeightControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				72C60AA0190428C0007789F6 /* WeightControlTests.m */,
+				72C60A9B190428BF007789F6 /* Supporting Files */,
+			);
+			path = WeightControlTests;
+			sourceTree = "<group>";
+		};
+		72C60A9B190428BF007789F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72C60A9C190428C0007789F6 /* WeightControlTests-Info.plist */,
+				72C60A9D190428C0007789F6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72C60A77190428BF007789F6 /* WeightControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72C60AA4190428C0007789F6 /* Build configuration list for PBXNativeTarget "WeightControl" */;
+			buildPhases = (
+				72C60A74190428BF007789F6 /* Sources */,
+				72C60A75190428BF007789F6 /* Frameworks */,
+				72C60A76190428BF007789F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeightControl;
+			productName = WeightControl;
+			productReference = 72C60A78190428BF007789F6 /* WeightControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72C60A92190428BF007789F6 /* WeightControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72C60AA7190428C0007789F6 /* Build configuration list for PBXNativeTarget "WeightControlTests" */;
+			buildPhases = (
+				72C60A8F190428BF007789F6 /* Sources */,
+				72C60A90190428BF007789F6 /* Frameworks */,
+				72C60A91190428BF007789F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72C60A99190428BF007789F6 /* PBXTargetDependency */,
+			);
+			name = WeightControlTests;
+			productName = WeightControlTests;
+			productReference = 72C60A93190428BF007789F6 /* WeightControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72C60A70190428BF007789F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = trsw;
+				TargetAttributes = {
+					72C60A92190428BF007789F6 = {
+						TestTargetID = 72C60A77190428BF007789F6;
+					};
+				};
+			};
+			buildConfigurationList = 72C60A73190428BF007789F6 /* Build configuration list for PBXProject "WeightControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72C60A6F190428BF007789F6;
+			productRefGroup = 72C60A79190428BF007789F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72C60A77190428BF007789F6 /* WeightControl */,
+				72C60A92190428BF007789F6 /* WeightControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72C60A76190428BF007789F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C60A86190428BF007789F6 /* InfoPlist.strings in Resources */,
+				72C60A8E190428BF007789F6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C60A91190428BF007789F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C60A9F190428C0007789F6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72C60A74190428BF007789F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C60A8C190428BF007789F6 /* WCAppDelegate.m in Sources */,
+				72C60A88190428BF007789F6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72C60A8F190428BF007789F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C60AA1190428C0007789F6 /* WeightControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72C60A99190428BF007789F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72C60A77190428BF007789F6 /* WeightControl */;
+			targetProxy = 72C60A98190428BF007789F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72C60A84190428BF007789F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72C60A85190428BF007789F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72C60A9D190428C0007789F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72C60A9E190428C0007789F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72C60AA2190428C0007789F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		72C60AA3190428C0007789F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72C60AA5190428C0007789F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeightControl/WeightControl-Prefix.pch";
+				INFOPLIST_FILE = "WeightControl/WeightControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72C60AA6190428C0007789F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeightControl/WeightControl-Prefix.pch";
+				INFOPLIST_FILE = "WeightControl/WeightControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		72C60AA8190428C0007789F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WeightControl.app/WeightControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeightControl/WeightControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WeightControlTests/WeightControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		72C60AA9190428C0007789F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WeightControl.app/WeightControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeightControl/WeightControl-Prefix.pch";
+				INFOPLIST_FILE = "WeightControlTests/WeightControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72C60A73190428BF007789F6 /* Build configuration list for PBXProject "WeightControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C60AA2190428C0007789F6 /* Debug */,
+				72C60AA3190428C0007789F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72C60AA4190428C0007789F6 /* Build configuration list for PBXNativeTarget "WeightControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C60AA5190428C0007789F6 /* Debug */,
+				72C60AA6190428C0007789F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72C60AA7190428C0007789F6 /* Build configuration list for PBXNativeTarget "WeightControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C60AA8190428C0007789F6 /* Debug */,
+				72C60AA9190428C0007789F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72C60A70190428BF007789F6 /* Project object */;
+}
