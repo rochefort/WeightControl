@@ -19,6 +19,8 @@
 		72C60A97190428BF007789F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7F190428BF007789F6 /* UIKit.framework */; };
 		72C60A9F190428C0007789F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72C60A9D190428C0007789F6 /* InfoPlist.strings */; };
 		72C60AA1190428C0007789F6 /* WeightControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60AA0190428C0007789F6 /* WeightControlTests.m */; };
+		72C60AAB19042AB6007789F6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C60AAA19042AB6007789F6 /* iPhone.storyboard */; };
+		72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		72C60A9C190428C0007789F6 /* WeightControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeightControlTests-Info.plist"; sourceTree = "<group>"; };
 		72C60A9E190428C0007789F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72C60AA0190428C0007789F6 /* WeightControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightControlTests.m; sourceTree = "<group>"; };
+		72C60AAA19042AB6007789F6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		72ED0FC1190430EB008F25B0 /* WCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCRegisterViewController.h; sourceTree = "<group>"; };
+		72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		72C60A6F190428BF007789F6 = {
 			isa = PBXGroup;
 			children = (
+				72C60AAA19042AB6007789F6 /* iPhone.storyboard */,
 				72C60A81190428BF007789F6 /* WeightControl */,
 				72C60A9A190428BF007789F6 /* WeightControlTests */,
 				72C60A7A190428BF007789F6 /* Frameworks */,
@@ -111,6 +117,8 @@
 				72C60A8B190428BF007789F6 /* WCAppDelegate.m */,
 				72C60A8D190428BF007789F6 /* Images.xcassets */,
 				72C60A82190428BF007789F6 /* Supporting Files */,
+				72ED0FC1190430EB008F25B0 /* WCRegisterViewController.h */,
+				72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */,
 			);
 			path = WeightControl;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C60A86190428BF007789F6 /* InfoPlist.strings in Resources */,
+				72C60AAB19042AB6007789F6 /* iPhone.storyboard in Resources */,
 				72C60A8E190428BF007789F6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C60A8C190428BF007789F6 /* WCAppDelegate.m in Sources */,
+				72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */,
 				72C60A88190428BF007789F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +448,7 @@
 				72C60AA6190428C0007789F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72C60AA7190428C0007789F6 /* Build configuration list for PBXNativeTarget "WeightControlTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +457,7 @@
 				72C60AA9190428C0007789F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
