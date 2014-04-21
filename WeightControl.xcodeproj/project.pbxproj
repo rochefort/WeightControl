@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72AEC94419056E2E00692DB1 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AEC94319056E2E00692DB1 /* iPhone.storyboard */; };
+		72AEC9511905730D00692DB1 /* WCWeightPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AEC9501905730D00692DB1 /* WCWeightPickerView.m */; };
+		72AEC9551905733B00692DB1 /* WCWeightPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AEC9541905733B00692DB1 /* WCWeightPickerView.xib */; };
 		72C60A7C190428BF007789F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7B190428BF007789F6 /* Foundation.framework */; };
 		72C60A7E190428BF007789F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7D190428BF007789F6 /* CoreGraphics.framework */; };
 		72C60A80190428BF007789F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7F190428BF007789F6 /* UIKit.framework */; };
@@ -19,7 +22,6 @@
 		72C60A97190428BF007789F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C60A7F190428BF007789F6 /* UIKit.framework */; };
 		72C60A9F190428C0007789F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72C60A9D190428C0007789F6 /* InfoPlist.strings */; };
 		72C60AA1190428C0007789F6 /* WeightControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60AA0190428C0007789F6 /* WeightControlTests.m */; };
-		72C60AAB19042AB6007789F6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C60AAA19042AB6007789F6 /* iPhone.storyboard */; };
 		72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72AEC94319056E2E00692DB1 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		72AEC94F1905730D00692DB1 /* WCWeightPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeightPickerView.h; sourceTree = "<group>"; };
+		72AEC9501905730D00692DB1 /* WCWeightPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeightPickerView.m; sourceTree = "<group>"; };
+		72AEC9541905733B00692DB1 /* WCWeightPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCWeightPickerView.xib; sourceTree = "<group>"; };
 		72C60A78190428BF007789F6 /* WeightControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeightControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C60A7B190428BF007789F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		72C60A7D190428BF007789F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,7 +56,6 @@
 		72C60A9C190428C0007789F6 /* WeightControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeightControlTests-Info.plist"; sourceTree = "<group>"; };
 		72C60A9E190428C0007789F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72C60AA0190428C0007789F6 /* WeightControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightControlTests.m; sourceTree = "<group>"; };
-		72C60AAA19042AB6007789F6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		72ED0FC1190430EB008F25B0 /* WCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCRegisterViewController.h; sourceTree = "<group>"; };
 		72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,10 +84,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72AEC94519056E4C00692DB1 /* 02_ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72ED0FC1190430EB008F25B0 /* WCRegisterViewController.h */,
+				72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */,
+			);
+			name = 02_ViewControllers;
+			sourceTree = "<group>";
+		};
+		72AEC94619056E6200692DB1 /* 03_Views */ = {
+			isa = PBXGroup;
+			children = (
+				72AEC94F1905730D00692DB1 /* WCWeightPickerView.h */,
+				72AEC9501905730D00692DB1 /* WCWeightPickerView.m */,
+				72AEC9541905733B00692DB1 /* WCWeightPickerView.xib */,
+			);
+			name = 03_Views;
+			sourceTree = "<group>";
+		};
 		72C60A6F190428BF007789F6 = {
 			isa = PBXGroup;
 			children = (
-				72C60AAA19042AB6007789F6 /* iPhone.storyboard */,
 				72C60A81190428BF007789F6 /* WeightControl */,
 				72C60A9A190428BF007789F6 /* WeightControlTests */,
 				72C60A7A190428BF007789F6 /* Frameworks */,
@@ -113,12 +136,13 @@
 		72C60A81190428BF007789F6 /* WeightControl */ = {
 			isa = PBXGroup;
 			children = (
+				72AEC94519056E4C00692DB1 /* 02_ViewControllers */,
+				72AEC94619056E6200692DB1 /* 03_Views */,
+				72AEC94319056E2E00692DB1 /* iPhone.storyboard */,
 				72C60A8A190428BF007789F6 /* WCAppDelegate.h */,
 				72C60A8B190428BF007789F6 /* WCAppDelegate.m */,
 				72C60A8D190428BF007789F6 /* Images.xcassets */,
 				72C60A82190428BF007789F6 /* Supporting Files */,
-				72ED0FC1190430EB008F25B0 /* WCRegisterViewController.h */,
-				72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */,
 			);
 			path = WeightControl;
 			sourceTree = "<group>";
@@ -228,8 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AEC9551905733B00692DB1 /* WCWeightPickerView.xib in Resources */,
 				72C60A86190428BF007789F6 /* InfoPlist.strings in Resources */,
-				72C60AAB19042AB6007789F6 /* iPhone.storyboard in Resources */,
+				72AEC94419056E2E00692DB1 /* iPhone.storyboard in Resources */,
 				72C60A8E190428BF007789F6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +276,7 @@
 			files = (
 				72C60A8C190428BF007789F6 /* WCAppDelegate.m in Sources */,
 				72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */,
+				72AEC9511905730D00692DB1 /* WCWeightPickerView.m in Sources */,
 				72C60A88190428BF007789F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
