@@ -20,20 +20,27 @@ NSMutableArray *decimalStrings;
 
 CGFloat defaultPositionY;
 
+NSString *selectedComponent1;
+NSString *selectedComponent2;
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self addSubview:[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil][0]];
-        defaultPositionY = self.frame.origin.y;
-        [self setup];
+
+        [self setupIncetanceVariables];
         self.hidden = YES;
     }
     return self;
 }
 
-- (void)setup
+- (void)setupIncetanceVariables
 {
+    // view initial position
+    defaultPositionY = self.frame.origin.y;
+    
+    // picker values
     intStrings = [[NSMutableArray alloc] init];
     for (int i=0; i<150; i++) {
         intStrings[i] = [NSString stringWithFormat:@"%d", i + 1];
@@ -43,6 +50,9 @@ CGFloat defaultPositionY;
     for (int i=0; i<=9; i++) {
         decimalStrings[i] = [NSString stringWithFormat:@"%d", i];
     }
+    // for notifcation
+    selectedComponent1 = @"1";
+    selectedComponent2 = @"0";
 }
 
 #pragma mark - Instance Methods
@@ -84,10 +94,36 @@ CGFloat defaultPositionY;
     return (component == 0 ? [intStrings count] : [decimalStrings count]);
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    return (component == 0 ? intStrings[row] : decimalStrings[row]);
+    UILabel *label = [[UILabel alloc] init];
+    CGFloat centerX = self.frame.size.width / 2;
+    if (component == 0) {
+        label.frame = CGRectMake(centerX - 100, 0, 100, 40);
+        label.text = intStrings[row];
+        label.textAlignment = NSTextAlignmentRight;
+    } else {
+        label.frame = CGRectMake(centerX, 0, 100, 40);
+        label.text = decimalStrings[row];
+    }
+    label.backgroundColor = [UIColor clearColor];
+    return label;
 }
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    NSString *selectedCmponentText = ((UILabel *)[pickerView viewForRow:row forComponent:component]).text;
+    if (component == 0) {
+        selectedComponent1 = selectedCmponentText;
+    } else {
+        selectedComponent2 = selectedCmponentText;
+    }
+    NSString *selectedStr = [NSString stringWithFormat:@"%@.%@", selectedComponent1, selectedComponent2];
+
+    NSNotification *n = [NSNotification notificationWithName:@"PickerDidSelectNotification" object:selectedStr];
+    [[NSNotificationCenter defaultCenter] postNotification:n];
+}
+
 
 #pragma mark - IBAction
 

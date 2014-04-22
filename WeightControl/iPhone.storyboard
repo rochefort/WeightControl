@@ -55,6 +55,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="OgC-3I-vxd"/>
                     <connections>
                         <outlet property="picker" destination="GE3-XB-mdp" id="PO0-Rd-5mX"/>
+                        <outlet property="weight" destination="u6C-TE-xYf" id="fJm-th-hzm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slR-5y-8lj" userLabel="First Responder" sceneMemberID="firstResponder"/>

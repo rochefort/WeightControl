@@ -11,6 +11,7 @@
 
 @interface WCRegisterViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet WCWeightPickerView *picker;
+@property (weak, nonatomic) IBOutlet UITextField *weight;
 
 @end
 
@@ -19,6 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // TODO: notificationの名前管理（naming ruleとか）
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(pickerDidSelectNotification:)
+                                                 name:@"PickerDidSelectNotification"
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,6 +39,13 @@
 {
     [self.picker show];
     return NO;
+}
+
+#pragma mark - Notification
+
+- (void) pickerDidSelectNotification:(NSNotification *)center
+{
+    self.weight.text = (NSString *)[center object];
 }
 
 @end
