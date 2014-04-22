@@ -11,7 +11,7 @@
 
 @interface WCRegisterViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet WCWeightPickerView *picker;
-@property (weak, nonatomic) IBOutlet UITextField *weight;
+@property (weak, nonatomic) IBOutlet UITextField *weightField;
 
 @end
 
@@ -45,7 +45,7 @@
 
 - (void) pickerDidSelectNotification:(NSNotification *)center
 {
-    self.weight.text = (NSString *)[center object];
+    self.weightField.text = (NSString *)[center object];
 }
 
 @end
