@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMDatabase.h"
 
 @interface WCDataManager : NSObject
+
++ (instancetype)sharedInstance;
+- (void)createDB;
 
 @end
