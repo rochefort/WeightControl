@@ -23,6 +23,8 @@
 		72C60A9F190428C0007789F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72C60A9D190428C0007789F6 /* InfoPlist.strings */; };
 		72C60AA1190428C0007789F6 /* WeightControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60AA0190428C0007789F6 /* WeightControlTests.m */; };
 		72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */; };
+		72FF146919080BAC007ACAEF /* WCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FF146819080BAC007ACAEF /* WCDataManager.m */; };
+		8909A6E8E571445DB379F19F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33746FE1705E42CDA2851C63 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33746FE1705E42CDA2851C63 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		519EA0666F584521AB5724B4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		72AEC94319056E2E00692DB1 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		72AEC94F1905730D00692DB1 /* WCWeightPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeightPickerView.h; sourceTree = "<group>"; };
 		72AEC9501905730D00692DB1 /* WCWeightPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeightPickerView.m; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		72C60AA0190428C0007789F6 /* WeightControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightControlTests.m; sourceTree = "<group>"; };
 		72ED0FC1190430EB008F25B0 /* WCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCRegisterViewController.h; sourceTree = "<group>"; };
 		72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
+		72FF146719080BAC007ACAEF /* WCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDataManager.h; sourceTree = "<group>"; };
+		72FF146819080BAC007ACAEF /* WCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 				72C60A7E190428BF007789F6 /* CoreGraphics.framework in Frameworks */,
 				72C60A80190428BF007789F6 /* UIKit.framework in Frameworks */,
 				72C60A7C190428BF007789F6 /* Foundation.framework in Frameworks */,
+				8909A6E8E571445DB379F19F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,7 @@
 				72C60A9A190428BF007789F6 /* WeightControlTests */,
 				72C60A7A190428BF007789F6 /* Frameworks */,
 				72C60A79190428BF007789F6 /* Products */,
+				519EA0666F584521AB5724B4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +137,7 @@
 				72C60A7D190428BF007789F6 /* CoreGraphics.framework */,
 				72C60A7F190428BF007789F6 /* UIKit.framework */,
 				72C60A94190428BF007789F6 /* XCTest.framework */,
+				33746FE1705E42CDA2851C63 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +145,7 @@
 		72C60A81190428BF007789F6 /* WeightControl */ = {
 			isa = PBXGroup;
 			children = (
+				72FF146619080B88007ACAEF /* 01_Models */,
 				72AEC94519056E4C00692DB1 /* 02_ViewControllers */,
 				72AEC94619056E6200692DB1 /* 03_Views */,
 				72AEC94319056E2E00692DB1 /* iPhone.storyboard */,
@@ -176,6 +186,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		72FF146619080B88007ACAEF /* 01_Models */ = {
+			isa = PBXGroup;
+			children = (
+				72FF146719080BAC007ACAEF /* WCDataManager.h */,
+				72FF146819080BAC007ACAEF /* WCDataManager.m */,
+			);
+			name = 01_Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72C60AA4190428C0007789F6 /* Build configuration list for PBXNativeTarget "WeightControl" */;
 			buildPhases = (
+				9FF2FEA98A414AC1B705AB02 /* Check Pods Manifest.lock */,
 				72C60A74190428BF007789F6 /* Sources */,
 				72C60A75190428BF007789F6 /* Frameworks */,
 				72C60A76190428BF007789F6 /* Resources */,
+				65AEF47FE39140AA82721FEC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,12 +290,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65AEF47FE39140AA82721FEC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF2FEA98A414AC1B705AB02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		72C60A74190428BF007789F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				72C60A8C190428BF007789F6 /* WCAppDelegate.m in Sources */,
+				72FF146919080BAC007ACAEF /* WCDataManager.m in Sources */,
 				72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */,
 				72AEC9511905730D00692DB1 /* WCWeightPickerView.m in Sources */,
 				72C60A88190428BF007789F6 /* main.m in Sources */,
@@ -391,6 +446,7 @@
 		};
 		72C60AA5190428C0007789F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 519EA0666F584521AB5724B4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -404,6 +460,7 @@
 		};
 		72C60AA6190428C0007789F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 519EA0666F584521AB5724B4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
