@@ -134,10 +134,11 @@ NSString *selectedComponent2;
     }
     NSString *selectedStr = [NSString stringWithFormat:@"%@.%@", selectedComponent1, selectedComponent2];
 
-    NSNotification *n = [NSNotification notificationWithName:@"PickerDidSelectNotification" object:selectedStr];
-    [[NSNotificationCenter defaultCenter] postNotification:n];
+    // call delegate method
+    if ([self.delegate respondsToSelector:@selector(pickerDidSelect:)]) {
+        [self.delegate pickerDidSelect:selectedStr];
+    }
 }
-
 
 #pragma mark - IBAction
 

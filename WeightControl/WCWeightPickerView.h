@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WCWeightPickerViewDelegate <NSObject>
+@required
+- (void)pickerDidSelect:(NSString *)value;
+@end
+
 @interface WCWeightPickerView : UIView
+@property (nonatomic, weak) id<WCWeightPickerViewDelegate> delegate;
 - (void)show;
 @end
+
+
