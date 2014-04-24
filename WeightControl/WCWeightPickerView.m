@@ -23,6 +23,14 @@ CGFloat defaultPositionY;
 NSString *selectedComponent1;
 NSString *selectedComponent2;
 
+// TODO:
+// 2. picker viewの見た目があんまりおしゃれじゃないのでなんとかする
+// 3. 登録内容をDBに突っ込む
+// 他
+// 初回登録画面を用意する
+// ロギングのpodsを入れてみる
+// データのexport方法(csv, dropbox自動連携, google chart連携)
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -58,6 +66,11 @@ NSString *selectedComponent2;
 #pragma mark - Instance Methods
 - (void)show
 {
+    // 既に開いていたら何もしない
+    if (!self.hidden) {
+        return;
+    }
+
     // TODO: frame関係のマクロを用意する
     CGRect frame = self.frame;
     frame.origin.y = defaultPositionY;
@@ -79,6 +92,7 @@ NSString *selectedComponent2;
         CGRect frame = self.frame;
         frame.origin.y = -1000.f;
         self.frame = frame;
+        self.hidden = YES;
     }];
 }
 
