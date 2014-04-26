@@ -9,6 +9,9 @@ build/*
 !default.xcworkspace
 xcuserdata
 
-#CocoaPod
+# CocoaPod
 Pods/*
 Podfile.lock
+
+# Private
+TODO.txt

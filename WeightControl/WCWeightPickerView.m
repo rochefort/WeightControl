@@ -23,14 +23,6 @@ CGFloat defaultPositionY;
 NSString *selectedComponent1;
 NSString *selectedComponent2;
 
-// TODO:
-// 2. picker viewの見た目があんまりおしゃれじゃないのでなんとかする
-// 3. 登録内容をDBに突っ込む
-// 他
-// 初回登録画面を用意する
-// ロギングのpodsを入れてみる
-// データのexport方法(csv, dropbox自動連携, google chart連携)
-
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
