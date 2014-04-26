@@ -11,6 +11,7 @@
 @protocol WCWeightPickerViewDelegate <NSObject>
 @required
 - (void)pickerDidSelect:(NSString *)value;
+- (void)pickerClose;
 @end
 
 @interface WCWeightPickerView : UIView

@@ -7,11 +7,13 @@
 //
 
 #import "WCAppDelegate.h"
+#import "WCDataManager.h"
 
 @implementation WCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[WCDataManager sharedInstance] createDB];
     return YES;
 }
 

@@ -24,6 +24,7 @@
 		72C60AA1190428C0007789F6 /* WeightControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C60AA0190428C0007789F6 /* WeightControlTests.m */; };
 		72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */; };
 		72FF146919080BAC007ACAEF /* WCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FF146819080BAC007ACAEF /* WCDataManager.m */; };
+		72FF146D190973EB007ACAEF /* WCWeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FF146C190973EB007ACAEF /* WCWeight.m */; };
 		8909A6E8E571445DB379F19F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33746FE1705E42CDA2851C63 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		72ED0FC2190430EB008F25B0 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
 		72FF146719080BAC007ACAEF /* WCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCDataManager.h; sourceTree = "<group>"; };
 		72FF146819080BAC007ACAEF /* WCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCDataManager.m; sourceTree = "<group>"; };
+		72FF146B190973EB007ACAEF /* WCWeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeight.h; sourceTree = "<group>"; };
+		72FF146C190973EB007ACAEF /* WCWeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeight.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 			children = (
 				72FF146719080BAC007ACAEF /* WCDataManager.h */,
 				72FF146819080BAC007ACAEF /* WCDataManager.m */,
+				72FF146B190973EB007ACAEF /* WCWeight.h */,
+				72FF146C190973EB007ACAEF /* WCWeight.m */,
 			);
 			name = 01_Models;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				72C60A8C190428BF007789F6 /* WCAppDelegate.m in Sources */,
 				72FF146919080BAC007ACAEF /* WCDataManager.m in Sources */,
 				72ED0FC3190430EB008F25B0 /* WCRegisterViewController.m in Sources */,
+				72FF146D190973EB007ACAEF /* WCWeight.m in Sources */,
 				72AEC9511905730D00692DB1 /* WCWeightPickerView.m in Sources */,
 				72C60A88190428BF007789F6 /* main.m in Sources */,
 			);

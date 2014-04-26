@@ -144,6 +144,11 @@ NSString *selectedComponent2;
 
 - (IBAction)doneButtonDidPush:(id)sender {
     [self hide];
+
+    // call delegate method
+    if ([self.delegate respondsToSelector:@selector(pickerClose)]) {
+        [self.delegate pickerClose];
+    }
 }
 
 @end

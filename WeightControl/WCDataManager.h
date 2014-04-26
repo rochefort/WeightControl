@@ -16,4 +16,10 @@
 
 - (void)createDB;
 
+- (void)executeUpdate:(NSString *)sql;
+- (void)executeUpdate:(NSString *)sql withArgumentsInArray:(NSArray *)arguments;
+
+- (NSArray *)executeQuery:(NSString *)sql;
+- (NSArray *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray *)arguments;
+
 @end
