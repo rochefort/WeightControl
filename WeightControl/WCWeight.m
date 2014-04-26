@@ -48,17 +48,17 @@
 - (void)insertOrUpdate
 {
     NSString *sql;
+    WCDataManager *dataMgr = [WCDataManager sharedInstance];
     WCWeight *weight = [WCWeight findByRecordedDate:self.recordedDate];
-    
     if (weight) {
         // update
         sql = @"UPDATE weights SET value = ? WHERE recorded_date = ?";
+        [dataMgr executeUpdate:sql withArgumentsInArray:@[self.value, self.recordedDate]];
     } else {
         // insert
         sql = @"INSERT INTO weights(recorded_date, value) VALUES(?, ?)";
+        [dataMgr executeUpdate:sql withArgumentsInArray:@[self.recordedDate, self.value]];
     }
-    WCDataManager *dataMgr = [WCDataManager sharedInstance];
-    [dataMgr executeUpdate:sql withArgumentsInArray:@[self.value, self.recordedDate]];
 }
 
 @end
