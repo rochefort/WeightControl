@@ -12,6 +12,8 @@
 @interface WCDataManager : NSObject
 
 + (instancetype)sharedInstance;
+- (instancetype)init __attribute__((unavailable("use sharedInstance")));
+
 - (void)createDB;
 
 @end
