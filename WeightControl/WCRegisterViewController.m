@@ -26,12 +26,23 @@ NSDateFormatter *dateFormat;
 {
     [super viewDidLoad];
     self.picker.delegate = self;
-    weight = [WCWeight new];
+
+    // initialize
+    NSDate *today = [[NSDate date] dateAtStartOfDay];
+    weight = [WCWeight findByRecordedDate:today];
+    if (!weight) {
+        weight = [WCWeight new];
+    }
 
     // 日付設定
-    weight.recordedDate = [[NSDate date] dateAtStartOfDay];
+    weight.recordedDate = today;
     dateFormat = [[NSDateFormatter alloc] init];
     self.todayLabel.text = [self dateToString:weight.recordedDate];
+
+    // 体重設定
+    if (weight.value) {
+        self.weightField.text = [weight.value stringValue];
+    }
 }
 
 - (NSString *)dateToString:(NSDate *)date
