@@ -61,4 +61,14 @@
     }
 }
 
+#pragma mark - debug
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"  id: %d\n  recordedDate: %@\n  value: %@",
+            self.id,
+            self.recordedDate,
+            self.value];
+}
+
 @end
