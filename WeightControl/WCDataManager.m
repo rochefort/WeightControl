@@ -42,8 +42,7 @@ NSString *const kDBFileName = @"wcdb.sqlite";
         return;
     }
     if (![db executeUpdate:sql]) {
-        // TODO: warning
-        NSLog(@"sql execute error: %@", sql);
+        NSLog(@"DB ERROR: %d: %@\nsql: %@", [db lastErrorCode], [db lastErrorMessage], sql);
     }
     [db close];
 }
@@ -56,8 +55,7 @@ NSString *const kDBFileName = @"wcdb.sqlite";
         return;
     }
     if (![db executeUpdate:sql withArgumentsInArray:arguments]) {
-        // TODO: warning
-        NSLog(@"sql execute error: %@", sql);
+        NSLog(@"DB ERROR: %d: %@\nsql: %@", [db lastErrorCode], [db lastErrorMessage], sql);
     }
     [db close];
 }
