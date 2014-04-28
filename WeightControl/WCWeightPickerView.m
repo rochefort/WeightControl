@@ -50,7 +50,7 @@ NSString *selectedComponent2;
     for (int i=0; i<=9; i++) {
         decimalStrings[i] = [NSString stringWithFormat:@"%d", i];
     }
-    // for notifcation
+    // for delegate
     selectedComponent1 = @"1";
     selectedComponent2 = @"0";
 }
