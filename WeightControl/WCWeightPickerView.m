@@ -7,9 +7,11 @@
 //
 
 #import "WCWeightPickerView.h"
+#import "WCWeight.h"
 
 @interface WCWeightPickerView () <UIPickerViewDataSource, UIPickerViewDelegate>
-- (IBAction)doneButtonDidPush:(id)sender;
+- (IBAction)closeButtonDidPush:(id)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 @end
 
@@ -50,19 +52,31 @@ NSString *selectedComponent2;
     for (int i=0; i<=9; i++) {
         decimalStrings[i] = [NSString stringWithFormat:@"%d", i];
     }
-    // for delegate
-    selectedComponent1 = @"1";
-    selectedComponent2 = @"0";
 }
 
 #pragma mark - Instance Methods
-- (void)show
+- (void)showWithWeightValue:(NSString *)value
 {
     // 既に開いていたら何もしない
     if (!self.hidden) {
         return;
     }
 
+    // 値設定
+    if ([value isEqualToString:@""]) {
+        // default value: 50.0kg
+        [self.pickerView selectRow:49 inComponent:0 animated:NO];
+        selectedComponent1 = @"50";
+        selectedComponent2 = @"0";
+    } else {
+        NSArray *tmp = [value componentsSeparatedByString:@"."];
+        [self.pickerView selectRow:[tmp[0] integerValue]-1 inComponent:0 animated:NO];
+        [self.pickerView selectRow:[tmp[1] integerValue] inComponent:1 animated:NO];
+        selectedComponent1 = [NSString stringWithFormat:@"%d", [tmp[0] integerValue]];
+        selectedComponent2 = [NSString stringWithFormat:@"%d", [tmp[1] integerValue]];
+    }
+
+    // 位置調整
     // TODO: frame関係のマクロを用意する
     CGRect frame = self.frame;
     frame.origin.y = defaultPositionY;
@@ -124,20 +138,36 @@ NSString *selectedComponent2;
     } else {
         selectedComponent2 = selectedCmponentText;
     }
-    NSString *selectedStr = [NSString stringWithFormat:@"%@.%@", selectedComponent1, selectedComponent2];
+    [self callDelegateForPickerDidSelect];
+}
 
+#pragma mark - IBAction
+
+/**
+ 何も変更せずにcloseボタンを押すと
+ pickerDidSelect が呼ばれない。（つまり値がsetされない）
+ そのためcloseボタン押下時にも pickerDidSelect をcallするようにしている。
+ */
+- (IBAction)closeButtonDidPush:(id)sender {
+    [self hide];
+    
+    [self callDelegateForPickerDidSelect];
+    [self callDelegateForPickerClose];
+}
+
+#pragma mark - delegate
+
+- (void)callDelegateForPickerDidSelect
+{
+    NSString *selectedStr = [NSString stringWithFormat:@"%@.%@", selectedComponent1, selectedComponent2];
     // call delegate method
     if ([self.delegate respondsToSelector:@selector(pickerDidSelect:)]) {
         [self.delegate pickerDidSelect:selectedStr];
     }
 }
 
-#pragma mark - IBAction
-
-- (IBAction)doneButtonDidPush:(id)sender {
-    [self hide];
-
-    // call delegate method
+- (void)callDelegateForPickerClose
+{
     if ([self.delegate respondsToSelector:@selector(pickerClose)]) {
         [self.delegate pickerClose];
     }

@@ -41,7 +41,7 @@ NSDateFormatter *dateFormat;
 
     // 体重設定
     if (weight.value) {
-        self.weightField.text = [weight.value stringValue];
+        self.weightField.text = [NSString stringWithFormat:@"%.1f", [weight.value doubleValue]];
     }
 }
 
@@ -61,7 +61,7 @@ NSDateFormatter *dateFormat;
 
 - (BOOL) textFieldShouldBeginEditing:(UITextView *)textView
 {
-    [self.picker show];
+    [self.picker showWithWeightValue:self.weightField.text];
     return NO;
 }
 

@@ -4,7 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WCWeightPickerView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WCWeightPickerView">
+            <connections>
+                <outlet property="pickerView" destination="fmh-IB-uCK" id="e0q-Ck-3Wj"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
@@ -25,7 +29,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eut-6a-2YX"/>
                         <barButtonItem title="Close" id="fRb-dd-7Vr">
                             <connections>
-                                <action selector="doneButtonDidPush:" destination="-1" id="fJa-G9-czO"/>
+                                <action selector="closeButtonDidPush:" destination="-1" id="dk2-vQ-L8o"/>
                             </connections>
                         </barButtonItem>
                     </items>

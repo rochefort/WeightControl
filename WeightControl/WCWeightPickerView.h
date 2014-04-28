@@ -16,7 +16,7 @@
 
 @interface WCWeightPickerView : UIView
 @property (nonatomic, weak) id<WCWeightPickerViewDelegate> delegate;
-- (void)show;
+- (void)showWithWeightValue:(NSString *)value;
 @end
 
 
