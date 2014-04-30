@@ -67,11 +67,6 @@ NSDateFormatter *dateFormat;
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - IBAction
 
 - (IBAction)setPrevDay:(id)sender {
