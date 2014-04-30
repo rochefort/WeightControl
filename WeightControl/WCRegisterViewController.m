@@ -7,13 +7,18 @@
 //
 
 #import "WCRegisterViewController.h"
+#import "FontAwesomeKit/FontAwesomeKit.h"
 #import "WCWeightPickerView.h"
 #import "WCWeight.h"
+
 
 @interface WCRegisterViewController () <UITextFieldDelegate, WCWeightPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet WCWeightPickerView *picker;
 @property (weak, nonatomic) IBOutlet UITextField *weightField;
 @property (weak, nonatomic) IBOutlet UILabel *todayLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *prevDayButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextDayButton;
 
 @end
 
@@ -43,6 +48,12 @@ NSDateFormatter *dateFormat;
     if (weight.value) {
         self.weightField.text = [NSString stringWithFormat:@"%.1f", [weight.value doubleValue]];
     }
+
+    // アイコン設定
+    FAKFontAwesome *caretLeftIcon = [FAKFontAwesome caretLeftIconWithSize:20];
+    FAKFontAwesome *caretRightIcon = [FAKFontAwesome caretRightIconWithSize:20];
+    [self.prevDayButton setAttributedTitle:[caretLeftIcon attributedString] forState:UIControlStateNormal];
+    [self.nextDayButton setAttributedTitle:[caretRightIcon attributedString] forState:UIControlStateNormal];
 }
 
 - (NSString *)dateToString:(NSDate *)date
