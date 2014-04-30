@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *prevDayButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextDayButton;
 
+- (IBAction)setPrevDay:(id)sender;
+- (IBAction)setNextDay:(id)sender;
+
 @end
 
 @implementation WCRegisterViewController
@@ -33,21 +36,9 @@ NSDateFormatter *dateFormat;
     self.picker.delegate = self;
 
     // initialize
-    NSDate *today = [[NSDate date] dateAtStartOfDay];
-    weight = [WCWeight findByRecordedDate:today];
-    if (!weight) {
-        weight = [WCWeight new];
-    }
-
-    // 日付設定
-    weight.recordedDate = today;
     dateFormat = [[NSDateFormatter alloc] init];
-    self.todayLabel.text = [self dateToString:weight.recordedDate];
-
-    // 体重設定
-    if (weight.value) {
-        self.weightField.text = [NSString stringWithFormat:@"%.1f", [weight.value doubleValue]];
-    }
+    NSDate *today = [[NSDate date] dateAtStartOfDay];
+    [self setupWeightAndUITextWithDate:today];
 
     // アイコン設定
     FAKFontAwesome *caretLeftIcon = [FAKFontAwesome caretLeftIconWithSize:20];
@@ -56,16 +47,39 @@ NSDateFormatter *dateFormat;
     [self.nextDayButton setAttributedTitle:[caretRightIcon attributedString] forState:UIControlStateNormal];
 }
 
-- (NSString *)dateToString:(NSDate *)date
+- (void)setupWeightAndUITextWithDate:(NSDate *)date
 {
-    [dateFormat setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"]];
-    [dateFormat setDateFormat:@"YYYY年M月d日(EEE)"];
-    return [dateFormat stringFromDate:date];
+    // weight
+    weight = [WCWeight findByRecordedDate:date];
+    if (!weight) {
+        weight = [WCWeight new];
+    }
+    weight.recordedDate = date;
+    
+    // 日付TextField
+    self.todayLabel.text = [self dateToString:weight.recordedDate];
+
+    // 体重Label
+    if (weight.value) {
+        self.weightField.text = [NSString stringWithFormat:@"%.1f", [weight.value doubleValue]];
+    } else {
+        self.weightField.text = @"";
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - IBAction
+
+- (IBAction)setPrevDay:(id)sender {
+    [self setupWeightAndUITextWithDate:[weight.recordedDate dateByAddingDays:-1]];
+}
+
+- (IBAction)setNextDay:(id)sender {
+    [self setupWeightAndUITextWithDate:[weight.recordedDate dateByAddingDays:1]];
 }
 
 #pragma mark - UITextView
@@ -87,6 +101,15 @@ NSDateFormatter *dateFormat;
 - (void)pickerClose
 {
     [weight insertOrUpdate];
+}
+
+#pragma mark - Private
+
+- (NSString *)dateToString:(NSDate *)date
+{
+    [dateFormat setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"]];
+    [dateFormat setDateFormat:@"YYYY年M月d日(EEE)"];
+    return [dateFormat stringFromDate:date];
 }
 
 @end
