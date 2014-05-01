@@ -8,9 +8,9 @@
 
 #import "WCRegisterViewController.h"
 #import "FontAwesomeKit/FontAwesomeKit.h"
+#import "PNChart.h"
 #import "WCWeightPickerView.h"
 #import "WCWeight.h"
-
 
 @interface WCRegisterViewController () <UITextFieldDelegate, WCWeightPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet WCWeightPickerView *picker;
