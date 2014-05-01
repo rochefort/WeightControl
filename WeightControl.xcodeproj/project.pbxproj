@@ -41,6 +41,7 @@
 /* Begin PBXFileReference section */
 		33746FE1705E42CDA2851C63 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		519EA0666F584521AB5724B4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		72A48F191912972A00808711 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		72AEC94319056E2E00692DB1 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		72AEC94F1905730D00692DB1 /* WCWeightPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCWeightPickerView.h; sourceTree = "<group>"; };
 		72AEC9501905730D00692DB1 /* WCWeightPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCWeightPickerView.m; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		72C60A6F190428BF007789F6 = {
 			isa = PBXGroup;
 			children = (
+				72A48F191912972A00808711 /* TODO.txt */,
 				72C60A81190428BF007789F6 /* WeightControl */,
 				72C60A9A190428BF007789F6 /* WeightControlTests */,
 				72C60A7A190428BF007789F6 /* Frameworks */,
