@@ -14,4 +14,14 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "NSDate+Escort.h"
+    #import "DDLog.h"
+    #import "DDTTYLogger.h"
+#endif
+
+#ifdef DEBUG
+    // デバッグ時は全レベルのログを表示する
+    static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+    // リリース時はログを表示しない
+    static const int ddLogLevel = LOG_LEVEL_OFF;
 #endif

@@ -14,6 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[WCDataManager sharedInstance] createDB];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     return YES;
 }
 
